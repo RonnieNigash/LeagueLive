@@ -1,0 +1,33 @@
+@import compass/typography/links/unstyled-link
+@import compass/typography/links/link-colors
+@import ../globals/color
+
+
+header
+  overflow: auto
+  padding: 10px 0px 10px 0px
+
+
+  h1
+    float: left
+
+    a
+      @include unstyled-link
+
+  nav
+    float: right
+
+    ul
+      list-style: none
+
+      li
+        float: left
+
+        a
+          display: block
+          padding: 10px 30px 10px 30px
+          text-decoration: none
+          font:
+            size: 18px
+
+          +link-colors($link-color, $link-highlight-color, $link-highlight-color, $link-color, $link-highlight-color)
