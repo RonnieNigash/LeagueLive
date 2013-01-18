@@ -1,16 +1,19 @@
 = render "layouts/header"
-p Desktop Layout
 header
-  h1 LoL Live Blog
+  div class="wrapper"
+    h1
+      a href=root_url LoL Live Blog
 
-  nav
-    ul
-      li
-        a href=root_url Home
-      li
-        a href=about_url About Us
+    nav
+      ul
+        li
+          a href=root_url Home
+        li
+          a href=about_url About Us
+
 
 = yield
+
 
 footer
   p Todo: Add footer
