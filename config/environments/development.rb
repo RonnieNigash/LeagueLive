@@ -37,4 +37,7 @@ LeagueLive::Application.configure do
 
   # Required by Devise
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # Email handling
+  config.action_mailer.delivery_method = :letter_opener
 end
