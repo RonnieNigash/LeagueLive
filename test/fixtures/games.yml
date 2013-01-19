@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  blue_stats: 1
+  purple_stats: 1
+  blue_team: 1
+  purple_team: 1
+  winner: 1
+  event: 
+
+two:
+  blue_stats: 1
+  purple_stats: 1
+  blue_team: 1
+  purple_team: 1
+  winner: 1
+  event: 
