@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  gold: 1.5
+  kills: 1
+  inhibitors: 1
+  first_ban: 1
+  second_ban: 1
+  third_ban: 1
+  player_1: 1
+  player_2: 1
+  player_3: 1
+  player_4: 1
+  player_5_integer: MyString
+
+two:
+  gold: 1.5
+  kills: 1
+  inhibitors: 1
+  first_ban: 1
+  second_ban: 1
+  third_ban: 1
+  player_1: 1
+  player_2: 1
+  player_3: 1
+  player_4: 1
+  player_5_integer: MyString

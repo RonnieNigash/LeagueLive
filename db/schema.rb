@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130119230351) do
+ActiveRecord::Schema.define(:version => 20130119231215) do
 
   create_table "champions", :force => true do |t|
     t.string   "name"
@@ -38,6 +38,51 @@ ActiveRecord::Schema.define(:version => 20130119230351) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "pro_teams", :force => true do |t|
+    t.string   "name"
+    t.string   "acronym"
+    t.string   "player1"
+    t.string   "player2"
+    t.string   "player3"
+    t.string   "player4"
+    t.string   "player5"
+    t.string   "sub"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "stats", :force => true do |t|
+    t.float    "gold"
+    t.integer  "kills"
+    t.integer  "inhibitors"
+    t.integer  "first_ban"
+    t.integer  "second_ban"
+    t.integer  "third_ban"
+    t.integer  "player_1"
+    t.integer  "player_2"
+    t.integer  "player_3"
+    t.integer  "player_4"
+    t.integer  "player_5"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "teams", :force => true do |t|
+    t.string   "name"
+    t.string   "acronym"
+    t.string   "player1"
+    t.string   "player2"
+    t.string   "player3"
+    t.string   "player4"
+    t.string   "player5"
+    t.string   "sub"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "teams", ["user_id"], :name => "index_teams_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
