@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  acronym: MyString
+  player1: MyString
+  player2: MyString
+  player3: MyString
+  player4: MyString
+  player5: MyString
+  sub: MyString
+  user: 
+
+two:
+  name: MyString
+  acronym: MyString
+  player1: MyString
+  player2: MyString
+  player3: MyString
+  player4: MyString
+  player5: MyString
+  sub: MyString
+  user: 
