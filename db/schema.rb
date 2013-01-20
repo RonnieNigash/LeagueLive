@@ -40,17 +40,22 @@ ActiveRecord::Schema.define(:version => 20130119231432) do
   end
 
   create_table "games", :force => true do |t|
-    t.integer  "blue_stats"
-    t.integer  "purple_stats"
-    t.integer  "blue_team"
-    t.integer  "purple_team"
-    t.integer  "winner"
+    t.integer  "blue_stats_id"
+    t.integer  "purple_stats_id"
+    t.integer  "blue_team_id"
+    t.integer  "purple_team_id"
+    t.integer  "winner_id"
     t.integer  "event_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
+  add_index "games", ["blue_stats_id"], :name => "index_games_on_blue_stats_id"
+  add_index "games", ["blue_team_id"], :name => "index_games_on_blue_team_id"
   add_index "games", ["event_id"], :name => "index_games_on_event_id"
+  add_index "games", ["purple_stats_id"], :name => "index_games_on_purple_stats_id"
+  add_index "games", ["purple_team_id"], :name => "index_games_on_purple_team_id"
+  add_index "games", ["winner_id"], :name => "index_games_on_winner_id"
 
   create_table "pro_teams", :force => true do |t|
     t.string   "name"
@@ -69,17 +74,26 @@ ActiveRecord::Schema.define(:version => 20130119231432) do
     t.float    "gold"
     t.integer  "kills"
     t.integer  "inhibitors"
-    t.integer  "first_ban"
-    t.integer  "second_ban"
-    t.integer  "third_ban"
-    t.integer  "player_1"
-    t.integer  "player_2"
-    t.integer  "player_3"
-    t.integer  "player_4"
-    t.integer  "player_5"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "first_ban_id"
+    t.integer  "second_ban_id"
+    t.integer  "third_ban_id"
+    t.integer  "player_1_id"
+    t.integer  "player_2_id"
+    t.integer  "player_3_id"
+    t.integer  "player_4_id"
+    t.integer  "player_5_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
+
+  add_index "stats", ["first_ban_id"], :name => "index_stats_on_first_ban_id"
+  add_index "stats", ["player_1_id"], :name => "index_stats_on_player_1_id"
+  add_index "stats", ["player_2_id"], :name => "index_stats_on_player_2_id"
+  add_index "stats", ["player_3_id"], :name => "index_stats_on_player_3_id"
+  add_index "stats", ["player_4_id"], :name => "index_stats_on_player_4_id"
+  add_index "stats", ["player_5_id"], :name => "index_stats_on_player_5_id"
+  add_index "stats", ["second_ban_id"], :name => "index_stats_on_second_ban_id"
+  add_index "stats", ["third_ban_id"], :name => "index_stats_on_third_ban_id"
 
   create_table "teams", :force => true do |t|
     t.string   "name"

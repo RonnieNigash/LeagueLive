@@ -1,4 +1,5 @@
 class Team < ActiveRecord::Base
+  include Team
   belongs_to :user
   attr_accessible :acronym, :name, :player1, :player2, :player3, :player4, :player5, :sub
 
