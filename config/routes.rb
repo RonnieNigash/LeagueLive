@@ -1,12 +1,15 @@
 LeagueLive::Application.routes.draw do
 
+  match 'channels/' => 'channels#index'
+  match 'channel/:id' => 'channels#show'
+
   post 'stats/create'
   put 'stats/update'
   delete 'stats/destroy'
 
-  post 'game/create'
-  put 'game/update'
-  delete 'game/destroy'
+  post 'games/create'
+  put 'games/update'
+  delete 'games/destroy'
 
   devise_for :users
 
