@@ -3,8 +3,7 @@ class HomepageController < ApplicationController
 
   def index
     if user_signed_in?
-      # TODO: Change this to Admin Panel URL
-      redirect_to about_url
+      redirect_to admin_path
     end
   end
 

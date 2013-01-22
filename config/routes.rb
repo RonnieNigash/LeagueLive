@@ -2,6 +2,7 @@ LeagueLive::Application.routes.draw do
 
   devise_for :users
 
+  match 'admin' => 'admin#index'
   match 'about' => 'homepage#about'
 
   root :to => 'homepage#index'
