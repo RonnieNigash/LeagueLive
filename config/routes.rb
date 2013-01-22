@@ -1,5 +1,9 @@
 LeagueLive::Application.routes.draw do
 
+  post 'stats/create'
+  put 'stats/update'
+  delete 'stats/destroy'
+
   post 'game/create'
   put 'game/update'
   delete 'game/destroy'
