@@ -1,5 +1,9 @@
 LeagueLive::Application.routes.draw do
 
+  post 'game/create'
+  put 'game/update'
+  delete 'game/destroy'
+
   devise_for :users
 
   match 'admin' => 'admin#index'
