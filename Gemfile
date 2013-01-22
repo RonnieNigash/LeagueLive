@@ -36,6 +36,9 @@ gem 'useragent'
 # User Account
 gem 'devise'
 
+# SLUG
+gem 'friendly_id'
+
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
