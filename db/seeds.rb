@@ -94,6 +94,7 @@ champions = Champion.create([
               { name: 'Talon' },
               { name: 'Taric' },
               { name: 'Teemo' },
+              { name: 'Thresh' },
               { name: 'Tristana' },
               { name: 'Trundle' },
               { name: 'Tryndamere' },
