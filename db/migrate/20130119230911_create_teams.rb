@@ -1,6 +1,6 @@
-class CreateProTeams < ActiveRecord::Migration
+class CreateTeams < ActiveRecord::Migration
   def change
-    create_table :pro_teams do |t|
+    create_table :teams do |t|
       t.string :name
       t.string :acronym
       t.string :player1
