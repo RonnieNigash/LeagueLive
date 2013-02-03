@@ -69,6 +69,19 @@ ActiveRecord::Schema.define(:version => 20130203040012) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "pro_teams", :force => true do |t|
+    t.string   "name"
+    t.string   "acronym"
+    t.string   "player1"
+    t.string   "player2"
+    t.string   "player3"
+    t.string   "player4"
+    t.string   "player5"
+    t.string   "sub"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "stats", :force => true do |t|
     t.float    "gold"
     t.integer  "kills"
@@ -103,9 +116,12 @@ ActiveRecord::Schema.define(:version => 20130203040012) do
     t.string   "player4"
     t.string   "player5"
     t.string   "sub"
+    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "teams", ["user_id"], :name => "index_teams_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
