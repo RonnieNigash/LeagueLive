@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130203024520) do
+ActiveRecord::Schema.define(:version => 20130203040012) do
 
   create_table "champions", :force => true do |t|
     t.string   "name"
@@ -27,8 +27,10 @@ ActiveRecord::Schema.define(:version => 20130203024520) do
     t.string   "language"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "game_id"
   end
 
+  add_index "commentaries", ["game_id"], :name => "index_commentaries_on_game_id"
   add_index "commentaries", ["user_id"], :name => "index_commentaries_on_user_id"
 
   create_table "events", :force => true do |t|
