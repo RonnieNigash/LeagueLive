@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130203040012) do
+ActiveRecord::Schema.define(:version => 20130203221757) do
 
   create_table "champions", :force => true do |t|
     t.string   "name"
@@ -69,18 +69,19 @@ ActiveRecord::Schema.define(:version => 20130203040012) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "pro_teams", :force => true do |t|
-    t.string   "name"
-    t.string   "acronym"
-    t.string   "player1"
-    t.string   "player2"
-    t.string   "player3"
-    t.string   "player4"
-    t.string   "player5"
-    t.string   "sub"
+  create_table "player_items", :force => true do |t|
+    t.integer  "item_id"
+    t.integer  "game_id"
+    t.integer  "player_id"
+    t.boolean  "sold"
+    t.integer  "slot"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "player_items", ["game_id"], :name => "index_player_items_on_game_id"
+  add_index "player_items", ["item_id"], :name => "index_player_items_on_item_id"
+  add_index "player_items", ["player_id"], :name => "index_player_items_on_player_id"
 
   create_table "stats", :force => true do |t|
     t.float    "gold"
@@ -116,12 +117,9 @@ ActiveRecord::Schema.define(:version => 20130203040012) do
     t.string   "player4"
     t.string   "player5"
     t.string   "sub"
-    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
-
-  add_index "teams", ["user_id"], :name => "index_teams_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
