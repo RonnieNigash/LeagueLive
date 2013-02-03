@@ -2,11 +2,9 @@ LeagueLive::Application.routes.draw do
 
   resources 'events', :only => [:index, :show]
 
-  resources 'channels', :only => [:index, :show]
-
   resources 'stats', :only => [:create, :update, :destroy]
 
-  resources 'games', :only => [:create, :update, :destroy]
+  resources 'games', :only => [:show, :create, :update, :destroy]
 
   devise_for :users
 
