@@ -1,5 +1,7 @@
 LeagueLive::Application.routes.draw do
 
+  resources 'events', :only => [:index, :show]
+
   match 'channels/' => 'channels#index'
   match 'channel/:id' => 'channels#show'
 
