@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130203022649) do
+ActiveRecord::Schema.define(:version => 20130203024520) do
 
   create_table "champions", :force => true do |t|
     t.string   "name"
@@ -49,8 +49,9 @@ ActiveRecord::Schema.define(:version => 20130203022649) do
     t.integer  "purple_team_id"
     t.integer  "winner_id"
     t.integer  "event_id"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
+    t.boolean  "promoted",        :default => false
   end
 
   add_index "games", ["blue_stats_id"], :name => "index_games_on_blue_stats_id"

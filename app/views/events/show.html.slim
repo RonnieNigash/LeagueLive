@@ -1,0 +1,7 @@
+h1 Promoted Games
+- @promoted_games.each do |game|
+  p= link_to game.blue_team.name + " vs " + game.purple_team.name, game
+
+h1 Community Games
+- @community_games.each do |game|
+  p= link_to game.blue_team.name + " vs " + game.purple_team.name, game
