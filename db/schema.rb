@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130204194522) do
+ActiveRecord::Schema.define(:version => 20130204225327) do
 
   create_table "champions", :force => true do |t|
     t.string   "name"
@@ -113,11 +113,11 @@ ActiveRecord::Schema.define(:version => 20130204194522) do
   create_table "teams", :force => true do |t|
     t.string   "name"
     t.string   "acronym"
-    t.string   "player1"
-    t.string   "player2"
-    t.string   "player3"
-    t.string   "player4"
-    t.string   "player5"
+    t.string   "top"
+    t.string   "mid"
+    t.string   "jungle"
+    t.string   "adc"
+    t.string   "support"
     t.string   "sub"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

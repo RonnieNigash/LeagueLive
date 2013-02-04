@@ -10,19 +10,19 @@ class Team < ActiveRecord::Base
   validates :acronym,     :presence => true,
                           :uniqueness => true
 
-  validates :player1,     :presence => true,
+  validates :top,         :presence => true,
                           :uniqueness => true
 
-  validates :player2,     :presence => true,
+  validates :mid,         :presence => true,
                           :uniqueness => true
 
-  validates :player3,     :presence => true,
+  validates :jungle,      :presence => true,
                           :uniqueness => true
 
-  validates :player4,     :presence => true,
+  validates :adc,         :presence => true,
                           :uniqueness => true
 
-  validates :player5,     :presence => true,
+  validates :support,     :presence => true,
                           :uniqueness => true
 
   friendly_id :name, use: :slugged
