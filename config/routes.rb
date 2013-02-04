@@ -1,5 +1,7 @@
 LeagueLive::Application.routes.draw do
 
+  resources 'teams', :only => [:index, :show]
+
   resources 'events', :only => [:index, :show]
 
   resources 'stats', :only => [:create, :update, :destroy]
