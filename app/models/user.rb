@@ -1,8 +1,10 @@
 class User < ActiveRecord::Base
   extend FriendlyId
 
-  has_many :games
   has_one :current_game, :class_name => "Game"
+
+  has_many :games
+
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
