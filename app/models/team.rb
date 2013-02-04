@@ -1,5 +1,7 @@
 
 class Team < ActiveRecord::Base
+  extend FriendlyId
+
   attr_accessible :acronym, :name, :player1, :player2, :player3, :player4, :player5, :sub
 
   validates :name,        :presence => true,
@@ -23,4 +25,5 @@ class Team < ActiveRecord::Base
   validates :player5,     :presence => true,
                           :uniqueness => true
 
+  friendly_id :name, use: :slugged
 end
