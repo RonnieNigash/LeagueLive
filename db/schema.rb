@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130205003339) do
+ActiveRecord::Schema.define(:version => 20130205005113) do
 
   create_table "champions", :force => true do |t|
     t.string   "name"
@@ -77,13 +77,15 @@ ActiveRecord::Schema.define(:version => 20130205003339) do
     t.integer  "player_id"
     t.boolean  "sold"
     t.integer  "slot"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "player_stats_id"
   end
 
   add_index "player_items", ["game_id"], :name => "index_player_items_on_game_id"
   add_index "player_items", ["item_id"], :name => "index_player_items_on_item_id"
   add_index "player_items", ["player_id"], :name => "index_player_items_on_player_id"
+  add_index "player_items", ["player_stats_id"], :name => "index_player_items_on_player_stats_id"
 
   create_table "player_stats", :force => true do |t|
     t.integer  "game_id"

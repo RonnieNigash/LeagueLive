@@ -2,6 +2,7 @@ class PlayerItem < ActiveRecord::Base
   belongs_to :item
   belongs_to :game
   belongs_to :player
+  belongs_to :player_items
 
   attr_accessible :slot, :sold
 
