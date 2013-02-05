@@ -1,5 +1,18 @@
 h1 Stats Grid
 
+h5 Blue Stats
+ul
+  li= blue_stats.gold.to_s + "k"
+  li= blue_stats.towers.to_s
+  li= blue_stats.inhibitors.to_s
+
+h5 Purple Stats
+ul
+  li= purple_stats.gold.to_s + "k"
+  li= purple_stats.towers.to_s
+  li= purple_stats.inhibitors.to_s
+
+
 h5 Bans:
 ul
   li= blue_stats.first_ban.name
