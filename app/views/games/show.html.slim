@@ -1,4 +1,4 @@
 h1 Game
 = render :partial => 'stats/show', :locals => { :blue_stats => @game.blue_stats, :purple_stats => @game.purple_stats }
-- @game.commentaries.each do |commentary|
-  p= commentary.title + ": " + commentary.message
+
+= render :partial => "commentaries/show", :collection => @game.commentaries, :as => :commentary
