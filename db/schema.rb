@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130204225327) do
+ActiveRecord::Schema.define(:version => 20130205003339) do
 
   create_table "champions", :force => true do |t|
     t.string   "name"
@@ -85,46 +85,65 @@ ActiveRecord::Schema.define(:version => 20130204225327) do
   add_index "player_items", ["item_id"], :name => "index_player_items_on_item_id"
   add_index "player_items", ["player_id"], :name => "index_player_items_on_player_id"
 
+  create_table "player_stats", :force => true do |t|
+    t.integer  "game_id"
+    t.integer  "player_id"
+    t.integer  "champion_id"
+    t.integer  "kills"
+    t.integer  "deaths"
+    t.integer  "assists"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "player_stats", ["champion_id"], :name => "index_player_stats_on_champion_id"
+  add_index "player_stats", ["game_id"], :name => "index_player_stats_on_game_id"
+  add_index "player_stats", ["player_id"], :name => "index_player_stats_on_player_id"
+
+  create_table "players", :force => true do |t|
+    t.string   "name"
+    t.integer  "team_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "players", ["team_id"], :name => "index_players_on_team_id"
+
   create_table "stats", :force => true do |t|
     t.float    "gold"
-    t.integer  "kills"
     t.integer  "inhibitors"
     t.integer  "first_ban_id"
     t.integer  "second_ban_id"
     t.integer  "third_ban_id"
-    t.integer  "player_1_id"
-    t.integer  "player_2_id"
-    t.integer  "player_3_id"
-    t.integer  "player_4_id"
-    t.integer  "player_5_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.integer  "towers"
   end
 
   add_index "stats", ["first_ban_id"], :name => "index_stats_on_first_ban_id"
-  add_index "stats", ["player_1_id"], :name => "index_stats_on_player_1_id"
-  add_index "stats", ["player_2_id"], :name => "index_stats_on_player_2_id"
-  add_index "stats", ["player_3_id"], :name => "index_stats_on_player_3_id"
-  add_index "stats", ["player_4_id"], :name => "index_stats_on_player_4_id"
-  add_index "stats", ["player_5_id"], :name => "index_stats_on_player_5_id"
   add_index "stats", ["second_ban_id"], :name => "index_stats_on_second_ban_id"
   add_index "stats", ["third_ban_id"], :name => "index_stats_on_third_ban_id"
 
   create_table "teams", :force => true do |t|
     t.string   "name"
     t.string   "acronym"
-    t.string   "top"
-    t.string   "mid"
-    t.string   "jungle"
-    t.string   "adc"
-    t.string   "support"
     t.string   "sub"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "slug"
+    t.integer  "top_id"
+    t.integer  "mid_id"
+    t.integer  "jungle_id"
+    t.integer  "adc_id"
+    t.integer  "support_id"
   end
 
+  add_index "teams", ["adc_id"], :name => "index_teams_on_adc_id"
+  add_index "teams", ["jungle_id"], :name => "index_teams_on_jungle_id"
+  add_index "teams", ["mid_id"], :name => "index_teams_on_mid_id"
   add_index "teams", ["slug"], :name => "index_teams_on_slug", :unique => true
+  add_index "teams", ["support_id"], :name => "index_teams_on_support_id"
+  add_index "teams", ["top_id"], :name => "index_teams_on_top_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",    :null => false

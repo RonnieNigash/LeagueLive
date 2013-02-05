@@ -8,6 +8,7 @@ class Game < ActiveRecord::Base
   has_one :purple_stats, :class_name => "Stats"
 
   has_many :commentaries
+  has_many :player_stats
 
   attr_accessible :blue_stats, :blue_team, :purple_stats, :purple_team, :winner
 end
