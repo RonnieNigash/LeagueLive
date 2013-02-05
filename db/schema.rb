@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130205005113) do
+ActiveRecord::Schema.define(:version => 20130205010127) do
 
   create_table "champions", :force => true do |t|
     t.string   "name"
@@ -120,9 +120,11 @@ ActiveRecord::Schema.define(:version => 20130205005113) do
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
     t.integer  "towers"
+    t.integer  "game_id"
   end
 
   add_index "stats", ["first_ban_id"], :name => "index_stats_on_first_ban_id"
+  add_index "stats", ["game_id"], :name => "index_stats_on_game_id"
   add_index "stats", ["second_ban_id"], :name => "index_stats_on_second_ban_id"
   add_index "stats", ["third_ban_id"], :name => "index_stats_on_third_ban_id"
 
