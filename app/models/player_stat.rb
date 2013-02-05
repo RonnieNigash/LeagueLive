@@ -2,7 +2,7 @@ class PlayerStat < ActiveRecord::Base
   belongs_to :game
   belongs_to :player
 
-  has_one :champion
+  belongs_to :champion
 
   has_many :player_items
 
