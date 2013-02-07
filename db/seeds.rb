@@ -318,7 +318,7 @@ tsm_players = Player.create([
 ])
 
 tsm = Team.create(
-                  name: 'Team Solomid',
+                  name: 'Team Solomid Snapdragon',
                   acronym: 'TSM',
                   top: Player.where(name: 'Dyrus').first,
                   mid: Player.where(name: 'Reginald').first,
