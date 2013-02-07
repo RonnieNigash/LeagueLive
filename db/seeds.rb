@@ -394,8 +394,8 @@ ggu_players = Player.create([
 ])
 
 ggu = Team.create(
-                  name: 'Curse',
-                  acronym: 'Crs',
+                  name: 'Good Game University',
+                  acronym: 'GGU',
                   top: Player.where(name: 'ZionSpartan').first,
                   mid: Player.where(name: 'Shiphtur').first,
                   jungle: Player.where(name: 'NintendudeX').first,
