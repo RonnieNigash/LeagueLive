@@ -7,8 +7,9 @@ class Team < ActiveRecord::Base
   has_one :jungle, :class_name => 'Player'
   has_one :adc, :class_name => 'Player'
   has_one :support, :class_name => 'Player'
+  has_one :sub, :class_name => 'Player'
 
-  attr_accessible :acronym, :name, :player1, :player2, :player3, :player4, :player5, :sub
+  attr_accessible :acronym, :name, :top, :mid, :jungle, :adc, :support, :sub
 
   friendly_id :name, use: :slugged
 end

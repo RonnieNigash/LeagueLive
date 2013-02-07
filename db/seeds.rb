@@ -280,3 +280,168 @@ items = Item.create([
                     { name: 'Zephyr' },
                     { name: 'Zhonya\'s Hourglass' }
 ])
+
+
+
+
+
+#
+#
+#
+#   Team and Players
+#
+#
+#
+
+
+# Team Solomid
+tsm_players = Player.create([
+                    { name: 'Dyrus' },
+                    { name: 'TheOddOne' },
+                    { name: 'Reginald' },
+                    { name: 'Chaox' },
+                    { name: 'Xpecial' }
+])
+
+tsm = Team.create(
+                  name: 'Team Solomid',
+                  acronym: 'TSM',
+                  top: Player.where(name: 'Dyrus').first,
+                  mid: Player.where(name: 'Reginald').first,
+                  jungle: Player.where(name: 'TheOddOne').first,
+                  adc: Player.where(name: 'Chaox').first,
+                  support: Player.where(name: 'Xspecial').first
+)
+
+# Team Counter Logic Gaming
+clg_players = Player.create([
+                    { name: 'HotshotGG' },
+                    { name: 'Chauster' },
+                    { name: 'L1Nk' },
+                    { name: 'Doublelift' },
+                    { name: 'Aphromoo' }
+])
+
+clg = Team.create(
+                  name: 'Counter Logic Gaming',
+                  acronym: 'CLG',
+                  top: Player.where(name: 'HotshotGG').first,
+                  mid: Player.where(name: 'L1Nk').first,
+                  jungle: Player.where(name: 'Chauster').first,
+                  adc: Player.where(name: 'Doublelift').first,
+                  support: Player.where(name: 'Aphromoo').first
+)
+
+# Team Dignitas
+dig_players = Player.create([
+                    { name: 'KiWiKiD' },
+                    { name: 'Crumbzz' },
+                    { name: 'Scarra' },
+                    { name: 'Imaqtpie' },
+                    { name: 'Patoy' }
+])
+
+dig = Team.create(
+                  name: 'Team Dignitas',
+                  acronym: 'Dig',
+                  top: Player.where(name: 'KiWiKiD').first,
+                  mid: Player.where(name: 'Scarra').first,
+                  jungle: Player.where(name: 'Crumbzz').first,
+                  adc: Player.where(name: 'Imaqtpie').first,
+                  support: Player.where(name: 'Patoy').first
+)
+
+# Team Curse
+crs_players = Player.create([
+                    { name: 'Voyboy' },
+                    { name: 'Saint vicious' },
+                    { name: 'NyJacky' },
+                    { name: 'Cop' },
+                    { name: 'Elementz' }
+])
+
+crs = Team.create(
+                  name: 'Curse',
+                  acronym: 'Crs',
+                  top: Player.where(name: 'Voyboy').first,
+                  mid: Player.where(name: 'NyJacky').first,
+                  jungle: Player.where(name: 'Saint vicious').first,
+                  adc: Player.where(name: 'Cop').first,
+                  support: Player.where(name: 'Elementz').first
+)
+
+# Team Good Game University
+ggu_players = Player.create([
+                    { name: 'ZionSpartan' },
+                    { name: 'NintendudeX' },
+                    { name: 'Shiphtur' },
+                    { name: 'DontMashMe' },
+                    { name: 'i am Anjo' }
+])
+
+ggu = Team.create(
+                  name: 'Curse',
+                  acronym: 'Crs',
+                  top: Player.where(name: 'ZionSpartan').first,
+                  mid: Player.where(name: 'Shiphtur').first,
+                  jungle: Player.where(name: 'NintendudeX').first,
+                  adc: Player.where(name: 'DontMashMe').first,
+                  support: Player.where(name: 'i am Anjo').first
+)
+
+# Team Vulcun
+vul_players = Player.create([
+                    { name: 'Sycho Sid' },
+                    { name: 'Xmithie' },
+                    { name: 'mandatory cloud' },
+                    { name: 'Zuna' },
+                    { name: 'Muffinqt' }
+])
+
+vul = Team.create(
+                  name: 'Vulcun',
+                  acronym: 'Vul',
+                  top: Player.where(name: 'Sycho Sid').first,
+                  mid: Player.where(name: 'mandatory cloud').first,
+                  jungle: Player.where(name: 'Xmithie').first,
+                  adc: Player.where(name: 'Zuna').first,
+                  support: Player.where(name: 'Muffinqt').first
+)
+
+# Team MRN
+mrn_players = Player.create([
+                    { name: 'MegaZero' },
+                    { name: 'ClakeyD' },
+                    { name: 'ecco' },
+                    { name: 'Heartbeat' },
+                    { name: 'AtomicN' }
+])
+
+mrn = Team.create(
+                  name: 'Team MRN',
+                  acronym: 'MRN',
+                  top: Player.where(name: 'MegaZero').first,
+                  mid: Player.where(name: 'ecco').first,
+                  jungle: Player.where(name: 'ClakeyD').first,
+                  adc: Player.where(name: 'Heartbeat').first,
+                  support: Player.where(name: 'AtomicN').first
+)
+
+# Team compLexity
+cLy_players = Player.create([
+                    { name: 'Nickwu' },
+                    { name: 'Lautemortis' },
+                    { name: 'Chuuper' },
+                    { name: 'Brunch U' },
+                    { name: 'Ellie Bee' }
+])
+
+cLy = Team.create(
+                  name: 'compLexity',
+                  acronym: 'cLy',
+                  top: Player.where(name: 'Nickwu').first,
+                  mid: Player.where(name: 'Chuuper').first,
+                  jungle: Player.where(name: 'Lautemortis').first,
+                  adc: Player.where(name: 'Brunch U').first,
+                  support: Player.where(name: 'Ellie Bee').first
+)
