@@ -288,6 +288,20 @@ items = Item.create([
 #
 #
 #
+#   Events
+#
+#
+#
+
+lsc = Event.create(
+                  name: 'League Championship Series',
+                  start_date: Date.new(2013, 2, 7),
+                  end_date: Date.new(2013, 4, 20)
+)
+
+#
+#
+#
 #   Team and Players
 #
 #
@@ -436,9 +450,9 @@ cLy_players = Player.create([
                     { name: 'Ellie Bee' }
 ])
 
-cLy = Team.create(
+coL = Team.create(
                   name: 'compLexity',
-                  acronym: 'cLy',
+                  acronym: 'coL',
                   top: Player.where(name: 'Nickwu').first,
                   mid: Player.where(name: 'Chuuper').first,
                   jungle: Player.where(name: 'Lautemortis').first,
