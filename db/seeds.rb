@@ -302,7 +302,7 @@ lsc = Event.create(
 #
 #
 #
-#   Team and Players
+#   NA Team and Players
 #
 #
 #
