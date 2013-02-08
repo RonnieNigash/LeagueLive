@@ -442,7 +442,7 @@ mrn = Team.create(
 )
 
 # Team compLexity
-cLy_players = Player.create([
+coL_players = Player.create([
                     { name: 'Nickwu' },
                     { name: 'Lautemortis' },
                     { name: 'Chuuper' },
