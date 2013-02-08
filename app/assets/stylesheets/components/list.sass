@@ -1,2 +1,17 @@
+@import compass/typography/links/link-colors
+@import ../globals/color
+
 ul
   list-style: none
+  margin-top: 20px
+
+  li
+    font:
+      size: 36px
+      weight: 100
+
+    a
+      display: block
+      padding: 20px
+      text-decoration: none
+      +link-colors($theme-text-color, $theme-text-color, $theme-text-color, $theme-text-color)

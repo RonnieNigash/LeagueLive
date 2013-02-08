@@ -1,4 +1,5 @@
 @import ../globals/size
+@import ../globals/color
 
 *
   padding: 0px
@@ -7,9 +8,13 @@
 // TODO: determine native mobile fonts, and create a font-family string based off of that.
 body
   font:
-    family: Helvetica
+    family: Helvetica Neue
     size: 16px
 
 .wrapper
   width: $desktop-width
   margin: auto
+
+#mobile
+  background: $theme-color
+  color: $theme-text-color

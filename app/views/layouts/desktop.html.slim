@@ -1,19 +1,23 @@
 = render "layouts/header"
-header
-  div class="wrapper"
-    h1
-      = link_to "LoL Live Blog", root_url
+body
+  p class="notice"= notice
+  p class="alert"= alert
 
-    nav
-      ul
-        li
-          a href=root_url Home
-        li
-          a href=about_url About Us
+  header
+    div class="wrapper"
+      h1
+        = link_to "LoL Live Blog", root_url
+
+      nav
+        ul
+          li
+            a href=root_url Home
+          li
+            a href=about_url About Us
 
 
-= yield
+  = yield
 
 
-footer
-  p Todo: Add footer
+  footer
+    p Todo: Add footer

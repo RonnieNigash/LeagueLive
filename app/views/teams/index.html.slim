@@ -1,4 +1,6 @@
-h1 Teams
+- content_for :title do
+ span  | Teams
+
 ul
   - @teams.each do |team|
     li= link_to team.name, team

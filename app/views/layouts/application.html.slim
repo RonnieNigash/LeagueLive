@@ -1,8 +1,11 @@
 = render "layouts/header"
-div id="mobile"
+body id="mobile"
+  p class="notice"= notice
+  p class="alert"= alert
+
   header
-    div class="wrapper"
-      h1
-        = link_to "LoL Live Blog", root_url
+    h1
+      = link_to "LoL Live Blog", root_url
+      = yield :title
 
   = yield
